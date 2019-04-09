@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Job Prep </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>   
+
+<body>
+    <div class="header">
+        <h1>Add</h1>
+    </div>
+
+    <form action = "/add" method = "POST">
+        <div class="group">
+            {% if flag %}
+                <i>{{ message }}</i>
+            {% endif %}
+            <h1>Add a question/answer</h1>
+            <table>
+                <tr>
+                    <td><b>Question</b></td>
+                    <td width="100%"><input type="text" placeholder="Enter a question" name="question" class='input-txt'></td>
+                </tr>
+                <tr>
+                    <td><b>Answer</b></td>
+                    <td width="100%"><input type="text" placeholder="Enter an answer" name="answer" class='input-txt'></td>
+                </tr>
+            </table>
+            <button type="submit" class="button" name="submit">Submit</button>
+            <button type="submit" class="button" name="submit" value="home">Home</button>
+        </div>
+    </form>
+
+
+</body>
+</html>
